@@ -65,7 +65,7 @@ class ESPTouchTask {
   /// * Dart code: https://github.com/smaho-engineering/esptouch_flutter/blob/master/example/lib/wifi_info.dart
   /// * iOS code: https://github.com/smaho-engineering/esptouch_flutter/blob/master/example/ios/Runner/AppDelegate.m
   /// * Android code: https://github.com/smaho-engineering/esptouch_flutter/blob/master/example/android/app/src/main/java/com/smaho/eng/esptouchexample/MainActivity.java
-  final String ssid;
+  final String? ssid;
 
   /// WiFi BSSID is the MAC address of the wireless access point.
   ///
@@ -79,22 +79,22 @@ class ESPTouchTask {
   /// * Dart code: https://github.com/smaho-engineering/esptouch_flutter/blob/master/example/lib/wifi_info.dart
   /// * iOS code: https://github.com/smaho-engineering/esptouch_flutter/blob/master/example/ios/Runner/AppDelegate.m
   /// * Android code: https://github.com/smaho-engineering/esptouch_flutter/blob/master/example/android/app/src/main/java/com/smaho/eng/esptouchexample/MainActivity.java
-  final String bssid;
+  final String? bssid;
 
   /// Password for the wireless access point.
   ///
   /// Example: `S3CR3t_P@ssW0rD`
-  final String password;
+  final String? password;
 
   /// Broadcast or Multicast
   final ESPTouchPacket packet;
 
   /// Configuration parameters for the task,
-  ESPTouchTaskParameter taskParameter;
+  ESPTouchTaskParameter? taskParameter;
 
   ESPTouchTask({
-    @required this.ssid,
-    @required this.bssid,
+    required this.ssid,
+    required this.bssid,
     this.password = '',
     this.packet = ESPTouchPacket.broadcast,
     this.taskParameter,
